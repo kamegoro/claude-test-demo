@@ -1,0 +1,14 @@
+# test-cases/back-preserves-data.yml
+# 確認画面から戻った際にデータが保持されることの確認
+tags:
+  - regression
+  - navigation
+steps:
+  - include: "navigate-to-form"
+  - include: "fill-valid-form"
+  - "「確認する」ボタンをクリックする"
+  - "ページに「入力内容の確認」と表示されていることを確認する"
+  - "「戻る」ボタンをクリックする"
+  - "「お名前」フィールドに「山田太郎」が入力されていることを確認する"
+  - "「メールアドレス」フィールドに「yamada@example.com」が入力されていることを確認する"
+  - "「お問い合わせ内容」フィールドに入力内容が保持されていることを確認する"

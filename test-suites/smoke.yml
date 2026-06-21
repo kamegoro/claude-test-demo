@@ -1,0 +1,8 @@
+name: "スモークテスト"
+description: "お問い合わせフォームの主要機能の確認"
+tags:
+  - smoke
+
+test-cases:
+  - "test-cases/happy-path.yml"
+  - "test-cases/validation.yml"
