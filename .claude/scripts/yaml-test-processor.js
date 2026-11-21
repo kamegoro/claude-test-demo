@@ -339,7 +339,7 @@ class YAMLTestProcessor {
     processTestCase(filePath) {
         try {
             const content = fs.readFileSync(filePath, 'utf8');
-            const testCase = yaml.load(content);
+            const testCase = content.trim() ? yaml.load(content) : null;
             
             if (!testCase) {
                 throw new Error('Invalid YAML content');
@@ -430,7 +430,7 @@ class YAMLTestProcessor {
     processTestSuite(filePath) {
         try {
             const content = fs.readFileSync(filePath, 'utf8');
-            const suite = yaml.load(content);
+            const suite = content.trim() ? yaml.load(content) : null;
             
             if (!suite) {
                 throw new Error('Invalid YAML content');
